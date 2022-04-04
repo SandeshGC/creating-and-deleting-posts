@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js" type="text/javaScript"></script>
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <button id="add-new-post" onclick="addPost()" class="btn new-post-btn">
+      + New Post
+    </button>
+    <input id="new-post-text" placeholder="Create a new post"></input>
+    <section id="all">
+      <div id="post-demo2" class="post">
+        <button
+          id="remove-post-demo2"
+          onclick="removePost('demo2')"
+          class="remove-btn btn"
+        >
+          X
+        </button>
+        <p>
+          Hi, I am Sandesh GC. I am learning javaScript which is an amazing
+          language. I love javaScript!
+        </p>
+        <button
+          id="like-post-demo2"
+          onclick="likePost('demo2')"
+          class="like-btn btn"
+        >
+          Like
+        </button>
+      </div>
+      <div id="post-demo1" class="post">
+        <button
+          id="remove-post-demo1"
+          onclick="removePost('demo1')"
+          class="remove-btn btn"
+        >
+          X
+        </button>
+        <p>
+          This is a sample post. You can add new posts to this page with the New
+          Post button at the top of the page.
+        </p>
+        <button
+          id="like-post-demo1"
+          onclick="likePost('demo1')"
+          class="like-btn btn"
+        >
+          Like
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

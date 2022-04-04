@@ -1,0 +1,48 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  width: 500px;
+  padding: 3vh 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: #001d3d;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+.btn {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 2px 0px;
+  width: 200px;
+  background-color: #f1faee;
+}
+.remove-btn {
+  margin-left: 100%;
+  width: 2.5em;
+  background-color: #e63946;
+  color: white;
+}
+.like-btn {
+  display: inline-block;
+}
+.post {
+  margin: 15px 0px;
+  padding: 15px;
+  border-radius: 10px;
+    background-color:#003566;
+}
+#new-post-text {
+  height: 50px;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  background-color: #f1faee;
+}
