@@ -1,15 +1,15 @@
-let id = 0;
-function removePost(id) {
-  let post = document.getElementById("post-" + id);
-  console.log(post);
-  console.log(id);
+let id = 0; //initializing id 0
+function removePost(id) { //removes a post
+   const post = document.getElementById("post-" + id);
+//   console.log(post);
+//   console.log(id);
   post.remove();
 }
-function likePost(id) {
-  let post = document.getElementById("post-" + id);
-  console.log(post);
-  let likeBtn = document.getElementById("like-post-" + id);
-  console.log(likeBtn);
+function likePost(id) {  //to like and unlike a post
+  const post = document.getElementById("post-" + id);
+//   console.log(post);
+  const likeBtn = document.getElementById("like-post-" + id);
+//   console.log(likeBtn);
   if (likeBtn.innerText === "Like") {
     likeBtn.style.backgroundColor = "rgb(50,100,255)";
     likeBtn.style.color = "#f1faee";
@@ -22,43 +22,41 @@ function likePost(id) {
 }
 //n = nth position to add new post
 let count = 0;
-function addPost() {
-  let addPostBtn = document.getElementById("add-new-post");
-  let postsContainer = document.getElementById("all");
-  console.log(postsContainer);
-  console.log(addPostBtn);
+function addPost() {  //adding a post
+  const addPostBtn = document.getElementById("add-new-post");
+  const postsContainer = document.getElementById("container"); //the container that contains all posts
+//   console.log(postsContainer);
+//   console.log(addPostBtn);
   //creating new remove button
-  let newRemoveBtn = document.createElement("button");
+  const newRemoveBtn = document.createElement("button");
   newRemoveBtn.classList.add("remove-btn", "btn");
   newRemoveBtn.textContent = "X";
   newRemoveBtn.setAttribute("onclick", `removePost(${count})`);
   newRemoveBtn.setAttribute("id", `remove-post-${count}`);
   //creating new like button
-  let newLikeBtn = document.createElement("button");
+  const newLikeBtn = document.createElement("button");
   newLikeBtn.classList.add("like-btn", "btn");
   newLikeBtn.textContent = "Like";
   newLikeBtn.setAttribute("id", `like-post-${count}`);
   newLikeBtn.setAttribute("onclick", `likePost(${count})`);
-  //creating <p> element
-  let postText = document.createElement("p");
-  let inputText = document.getElementById("new-post-text");
-  if (inputText.value.length === 0 || inputText.value.trim()==0) {
-    window.alert("Your post is empty!");
-    inputText.value=""
+  //creating <p> element that contains content of post
+  const postText = document.createElement("p");
+  const inputText = document.getElementById("new-post-text");
+  if (inputText.value.length === 0 || inputText.value.trim()==0) {   //checking if the post is empty or contains only whitespaces
+    window.alert("Your post is empty!"); 
+    inputText.value=""  //resetting the input field
   } else {
-    postText.innerText = `${inputText.value}`;
-    //creating div element for new post
-    let newPost = document.createElement("div");
-    newPost.setAttribute("id", `post-${count}`);
-    newPost.classList.add("post");
+    postText.innerText = `${inputText.value}`;  //puts the content of post in the paragraph
+//creating div element container for new post
+    const newPostContainer = document.createElement("div");
+    newPostContainer.setAttribute("id", `post-${count}`);
+    newPostContainer.classList.add("post");
+    newPostContainer.appendChild(newRemoveBtn);
+    newPostContainer.appendChild(postText);
+    newPostContainer.appendChild(newLikeBtn);
 
-    newPost.appendChild(newRemoveBtn);
-
-    newPost.appendChild(postText);
-    newPost.appendChild(newLikeBtn);
-
-    postsContainer.prepend(newPost);
+    postsContainer.prepend(newPostContainer);
     count++; //no. of posts is increased.
-    inputText.value= "";
+    inputText.value= ""; //input field is reset after posting is done
   }
 }
