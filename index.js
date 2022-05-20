@@ -13,11 +13,11 @@ function likePost(id) {  //to like and unlike a post
   if (likeBtn.innerText === "Like") {
     likeBtn.style.backgroundColor = "rgb(50,100,255)";
     likeBtn.style.color = "#f1faee";
-    likeBtn.innerText = "Unlike";
+    likeBtn.textContent = "Unlike";
   } else {
     likeBtn.style.backgroundColor = "#e5e5e5";
     likeBtn.style.color = "#000000";
-    likeBtn.innerText = "Like";
+    likeBtn.textContent= "Like";
   }
 }
 //n = nth position to add new post
@@ -41,12 +41,12 @@ function addPost() {  //adding a post
   newLikeBtn.setAttribute("onclick", `likePost(${count})`);
   //creating <p> element that contains content of post
   const postText = document.createElement("p");
-  const inputText = document.getElementById("new-post-text");
+  const inputText = document.getElementById("new-post-text");  //element that takes user input
   if (inputText.value.length === 0 || inputText.value.trim()==0) {   //checking if the post is empty or contains only whitespaces
     window.alert("Your post is empty!"); 
     inputText.value=""  //resetting the input field
   } else {
-    postText.innerText = `${inputText.value}`;  //puts the content of post in the paragraph
+    postText.textContent = `${inputText.value}`;  //puts the content of post in the paragraph
 //creating div element container for new post
     const newPostContainer = document.createElement("div");
     newPostContainer.setAttribute("id", `post-${count}`);
