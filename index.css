@@ -1,20 +1,26 @@
-body {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  
+}
+body {
+/*   font-family: "Inter", sans-serif; */
   font-size: 20px;
   width: 500px;
   padding: 3vh 0;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box;
+/*   box-sizing: border-box; */
   background-color: #001d3d;
   color: white;
 }
 h1 {
   text-align: center;
 }
-.btn {
+.btn {   /*for all buttons on the site*/
   font-size: 15px;
-  font-family: "Inter", sans-serif;
   border: none;
   border-radius: 25px;
   padding: 10px;
@@ -22,22 +28,22 @@ h1 {
   width: 200px;
   background-color: #f1faee;
 }
-.remove-btn {
+.remove-btn { /*button for removing posts*/
   margin-left: 100%;
   width: 2.5em;
   background-color: #e63946;
   color: white;
 }
-.like-btn {
+.like-btn { /*button for liking and unliking a post*/
   display: inline-block;
 }
-.post {
+.post {  /*for every post*/
   margin: 15px 0px;
   padding: 15px;
   border-radius: 10px;
     background-color:#003566;
 }
-#new-post-text {
+#new-post-text { /*input field for creating new post*/
   height: 50px;
   width: 100%;
   font-family: 'Inter', sans-serif;
