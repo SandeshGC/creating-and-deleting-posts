@@ -6,13 +6,11 @@
   
 }
 body {
-/*   font-family: "Inter", sans-serif; */
   font-size: 20px;
   width: 500px;
   padding: 3vh 0;
   margin-left: auto;
   margin-right: auto;
-/*   box-sizing: border-box; */
   background-color: #001d3d;
   color: white;
 }
@@ -41,10 +39,11 @@ h1 {
   margin: 15px 0px;
   padding: 15px;
   border-radius: 10px;
-    background-color:#003566;
+  background-color:#003566;
+  max-height: auto;
 }
 #new-post-text { /*input field for creating new post*/
-  height: 50px;
+  height: 150px;
   width: 100%;
   font-family: 'Inter', sans-serif;
   font-size: 20px;
